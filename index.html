@@ -1,9 +1,9 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><style>.hero-copy h1{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:clamp(52px,10vw,104px);line-height:.92;letter-spacing:.04em}@media(max-width:640px){.hero-copy h1{font-size:clamp(62px,15vw,84px)}}</style></head><body>
 <meta name="claude:viewport-fit-sides" content="cover">
 <title>Joshua Sajeev</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Poppins:wght@700;800&amp;display=swap" rel="stylesheet">
 <style>
   /* ========================================================================
      DESIGN PLAN
@@ -126,6 +126,7 @@
     padding:28px;
     position:relative;
     overflow:hidden;
+    cursor:default;
   }
   .mono-card svg.dash{position:absolute;top:-6px;left:40px;width:150px;height:90px;opacity:.9;}
   .mono-glyph{
@@ -134,6 +135,11 @@
     background:var(--orange);
     display:flex;align-items:center;justify-content:center;
     margin-bottom:20px;
+    overflow:hidden;
+  }
+  .mono-glyph img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    transform:scale(1.25);
   }
   .mono-glyph span{
     font-family:var(--font-display);
@@ -144,7 +150,7 @@
   }
   .mono-card h3{font-size:24px;}
   .mono-card .role{
-    font-family:var(--font-mono);font-size:13px;color:var(--orange-dim);
+    font-family:'Poppins',sans-serif;font-size:13px;color:var(--orange-dim);
     margin-top:4px;letter-spacing:.02em;
   }
   .mono-card .role .blink{
@@ -164,7 +170,7 @@
   }
   .mono-card p{font-size:14px;color:#4a473e;margin-top:14px;}
   .mono-glyph{position:relative;}
-  .corner-mark{position:absolute;width:16px;height:16px;}
+  .corner-mark{position:absolute;width:16px;height:16px;z-index:1;}
   .corner-mark.tl{top:10px;left:10px;border-top:2px solid var(--bg);border-left:2px solid var(--bg);}
   .corner-mark.tr{top:10px;right:10px;border-top:2px solid var(--bg);border-right:2px solid var(--bg);}
   .corner-mark.bl{bottom:10px;left:10px;border-bottom:2px solid var(--bg);border-left:2px solid var(--bg);}
@@ -182,12 +188,24 @@
   .mono-pills a:hover, .mono-pills button:hover{background:var(--bg);color:var(--cream);}
   .mono-pills button.copied{background:var(--orange);border-color:var(--orange);color:var(--bg);}
   .mono-pills svg{width:16px;height:16px;}
-
+  @media (max-width:640px){
+    .mono-card{width:100%;margin-inline:auto;padding:22px;border-radius:18px;}
+    .mono-glyph{border-radius:14px;margin-bottom:16px;}
+    .mono-glyph span{font-size:76px;}
+    .mono-card h3{font-size:23px;}
+    .mono-card .role{font-size:15px;}
+    .mono-card p{font-size:15px;margin-top:13px;}
+    .status-chip{font-size:10.5px;margin-top:11px;}
+    .mono-pills{gap:8px;margin-top:16px;}
+    .mono-pills a,.mono-pills button{width:34px;height:34px;}
+    .mono-pills a,.mono-pills button{cursor:pointer;}
+  }
   .hero-copy h1{
     font-size:clamp(52px,10vw,104px);
     line-height:.92;
-    letter-spacing:-.01em;
+    letter-spacing:.04em;
   }
+  @media (max-width:640px){.hero-copy h1{font-size:clamp(62px,15vw,84px);}}
   .hero-copy h1 .fg-line{color:var(--fg);display:block;}
   .hero-copy h1 .outline-line{
     display:block;
@@ -328,6 +346,12 @@
   .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   @media (max-width:760px){.skills-grid{grid-template-columns:1fr 1fr;}}
   @media (max-width:480px){.skills-grid{grid-template-columns:1fr;}}
+  @media (max-width:640px){
+    .section-head h2{font-size:28px;}
+    .project-body h3{font-size:24px;}
+    .exp-top h3{font-size:26px;}
+    .contact-head h2{font-size:clamp(36px,9vw,58px);}
+  }
   .skill-block{border-left:2px solid var(--orange);padding-left:16px;}
   .skill-block:nth-child(even){border-left-color:var(--lime);}
   .skill-block h4{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-dim);margin-bottom:8px;font-weight:500;}
@@ -394,7 +418,7 @@
           <span class="corner-mark tr"></span>
           <span class="corner-mark bl"></span>
           <span class="corner-mark br"></span>
-          <span>JS</span>
+          <img src="face.png" alt="Illustrated portrait of Joshua Sajeev">
         </div>
         <h3>Joshua Sajeev</h3>
         <div class="role">Backend Engineer<span class="blink">_</span></div>
@@ -418,10 +442,11 @@
         <div class="eyebrow hero-eyebrow">Kannur, Kerala, India · <b>Available for backend roles</b></div>
         <h1><span class="fg-line">BACKEND</span><span class="outline-line">ENGINEER</span></h1>
         <p class="hero-bio">
-          I ship <b>production-grade Go services</b> end to end — REST APIs, concurrency,
-          PostgreSQL, and the infrastructure underneath. Currently at Trellix, building a
-          malware-submission backend, and leaning on AI-assisted tooling to build, test and
-          iterate faster without skipping review.
+          Backend Engineer focused on Go, building reliable backend services and distributed systems.
+          Experienced in REST API design, PostgreSQL, concurrency, and with an emphasis on clean
+          architecture, testing, and production-quality engineering. Use AI-assisted development
+          tools to accelerate implementation and testing while maintaining ownership of code quality
+          and technical decisions.
         </p>
 
         <div class="stat-row">
@@ -577,7 +602,7 @@
         <div class="dates">Jul 2025 — Jul 2026</div>
       </div>
       <ul class="exp-points">
-        <li>Developed a REST API service in Go with Gin for a malware submission dashboard using Clean Architecture and CQRS-lite, writing testable code across the API, service and data layers and eliminating N+1 queries via optimized aggregation.</li>
+        <li>Built a Go and Gin proof of concept for a malware submission dashboard, using Clean Architecture and CQRS-lite and optimizing data aggregation to avoid N+1 queries.</li>
         <li>Resolved 16 product defects across four platforms (Linux, Windows, macOS, Windows Server) through log analysis, issue reproduction and root-cause debugging across service boundaries.</li>
         <li>Improved reliability with structured error handling, consistent logging and graceful failure propagation; built cross-browser E2E automation for malware submission workflows in Python and Playwright.</li>
         <li>Collaborated with senior engineers on architecture, code reviews, design discussions and cross-functional QA.</li>
