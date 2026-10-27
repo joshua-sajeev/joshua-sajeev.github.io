@@ -102,6 +102,12 @@
     transition:color .15s ease;
   }
   .nav-links a:hover,.nav-links a:focus-visible{color:var(--lime);}
+  @media (max-width:640px){
+    .nav-inner{gap:10px;padding-block:12px;}
+    .nav-name{font-size:12px;}
+    .nav-links{gap:14px;}
+    .nav-links a{font-size:11px;letter-spacing:.02em;}
+  }
 
   section{padding-block:88px;border-bottom:1px solid var(--line);}
   section:last-of-type{border-bottom:none;}
@@ -213,6 +219,7 @@
     -webkit-text-stroke:1.5px var(--fg-dim);
   }
   .hero-eyebrow{margin-bottom:14px;}
+  @media (max-width:640px){.hero-eyebrow b{display:block;}}
   .hero-bio{
     max-width:52ch;
     font-size:16.5px;color:var(--fg-dim);
@@ -268,6 +275,11 @@
   .section-head .num{font-family:var(--font-mono);color:var(--fg-dim);font-size:13px;}
   .terminal-head{font-family:var(--font-mono);font-weight:500;font-size:clamp(22px,4vw,32px);letter-spacing:-.01em;}
   .terminal-head .prompt{color:var(--lime);margin-right:12px;}
+  @media (max-width:640px){
+    .terminal-head{font-size:clamp(14px,4.2vw,22px);white-space:nowrap;letter-spacing:-.03em;}
+    .terminal-head .prompt{margin-right:6px;}
+    .section-head{gap:10px;}
+  }
 
   /* ---------- projects ---------- */
   .project-grid{display:grid;grid-template-columns:1fr;gap:28px;}
@@ -469,7 +481,7 @@
 
   <section id="projects">
     <div class="section-head">
-      <h2 class="terminal-head"><span class="prompt">$</span>cat personal-projects.md</h2>
+      <h2 class="terminal-head"><span class="prompt">$</span>cat projects.md</h2>
       <span class="num">01 / Projects</span>
     </div>
     <div class="project-grid">
