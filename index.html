@@ -348,9 +348,9 @@
   .exp-top .dates{font-family:var(--font-mono);color:var(--fg-dim);font-size:13px;white-space:nowrap;}
   .exp-points{list-style:none;margin:0 0 30px;padding:0;display:flex;flex-direction:column;gap:14px;}
   .exp-points li{
-    display:flex;gap:12px;color:var(--fg-dim);font-size:15px;
+    position:relative;padding-left:18px;color:var(--fg-dim);font-size:15px;
   }
-  .exp-points li::before{content:"";width:6px;height:6px;border-radius:999px;background:var(--lime);margin-top:9px;flex:none;}
+  .exp-points li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:999px;background:var(--lime);}
   .stack-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:26px;border-top:1px solid var(--line);}
   @media (max-width:760px){.stack-grid{grid-template-columns:1fr 1fr;}}
   .stack-grid .cat-name{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-dim);margin-bottom:10px;}
@@ -468,11 +468,10 @@
         <div class="eyebrow hero-eyebrow">Kannur, Kerala, India · <b>Available for backend roles</b></div>
         <h1><span class="fg-line">BACKEND</span><span class="outline-line">ENGINEER</span></h1>
         <p class="hero-bio">
-          Backend Engineer focused on Go, building reliable backend services and distributed systems.
-          Experienced in REST API design, PostgreSQL, concurrency, and with an emphasis on clean
-          architecture, testing, and production-quality engineering. Use AI-assisted development
-          tools to accelerate implementation and testing while maintaining ownership of code quality
-          and technical decisions.
+          <b>Backend Engineer</b> with experience shipping features end to end across the stack,
+          building production-grade <b>Go services</b> and distributed backend systems. Strong in
+          REST API design, PostgreSQL, concurrency, infrastructure, and product quality, leveraging
+          AI-assisted development tools to build, test, and iterate faster.
         </p>
 
         <div class="stat-row">
@@ -628,15 +627,15 @@
         <div class="dates">Jul 2025 — Jul 2026</div>
       </div>
       <ul class="exp-points">
-        <li>Built a Go and Gin proof of concept for a malware submission dashboard, using Clean Architecture and CQRS-lite and optimizing data aggregation to avoid N+1 queries.</li>
-        <li>Resolved 16 product defects across four platforms (Linux, Windows, macOS, Windows Server) through log analysis, issue reproduction and root-cause debugging across service boundaries.</li>
-        <li>Improved reliability with structured error handling, consistent logging and graceful failure propagation; built cross-browser E2E automation for malware submission workflows in Python and Playwright.</li>
-        <li>Collaborated with senior engineers on architecture, code reviews, design discussions and cross-functional QA.</li>
+        <li><strong>Built a Go-based POC</strong> for a malware submission dashboard using <strong>Gin</strong>, Clean Architecture, and CQRS-lite, with PostgreSQL-backed read and write operations across API, service, and data layers under senior engineers’ guidance.</li>
+        <li><strong>Resolved 16 product defects</strong> across <strong>4 platforms</strong> (Linux, Windows, macOS, and Windows Server) through issue reproduction, log analysis, and root-cause debugging in a cross-platform security product.</li>
+        <li><strong>Contributed to product quality</strong> as part of the QA team through end-to-end validation, defect investigation, and collaboration with developers on troubleshooting and resolution.</li>
+        <li><strong>Proactively explored test automation</strong> by using <strong>Playwright</strong> to automate parts of existing end-to-end product validation workflows.</li>
       </ul>
       <div class="stack-grid">
         <div><div class="cat-name">Backend</div><div class="cat-items">Go, Gin, REST APIs</div></div>
         <div><div class="cat-name">Architecture</div><div class="cat-items">Clean Architecture, CQRS-lite</div></div>
-        <div><div class="cat-name">Testing</div><div class="cat-items">Python, Playwright, E2E</div></div>
+        <div><div class="cat-name">Testing</div><div class="cat-items">Playwright, E2E</div></div>
         <div><div class="cat-name">Platforms</div><div class="cat-items">Linux, Windows, macOS, Win Server</div></div>
       </div>
     </div>
@@ -653,7 +652,9 @@
       <div class="skill-block"><h4>Databases</h4><p>PostgreSQL, Transactions</p></div>
       <div class="skill-block"><h4>Testing &amp; DevOps</h4><p>Unit, Integration, E2E Testing, Docker, CI/CD, GitHub Actions</p></div>
       <div class="skill-block"><h4>AI Tooling</h4><p>Claude Code, Codex, Gemini CLI, Antigravity</p></div>
-      <div class="skill-block"><h4>Tools &amp; Collaboration</h4><p>Gin, chi, Linux, Git, Agile/Scrum, Code Reviews</p></div>
+      <div class="skill-block"><h4>Tools</h4><p>Gin, chi, Linux, Git</p></div>
+      <div class="skill-block"><h4>Collaboration</h4><p>Agile/Scrum, Cross-functional Communication</p></div>
+      <div class="skill-block"><h4>CS Fundamentals</h4><p>Data Structures, Algorithms, System Design</p></div>
     </div>
 
     <div class="edu-row">
