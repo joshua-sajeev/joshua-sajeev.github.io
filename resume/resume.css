@@ -17,3 +17,19 @@
     @media(min-width:761px){.resume-page .project-description li{font-size:23px}}
     @media(max-width:760px){.resume-page .project-description li{font-size:16px}}
     @media(min-width:761px){.resume-page{font-size:17px}.resume-page .hero .intro{font-size:19px}.resume-page .copy{font-size:18px}.resume-page .project h3{font-size:40px}.resume-page .project .date,.resume-page .project .stack,.resume-page .project .repo{font-size:16px}.resume-page .project-description li{font-size:19px}.resume-page .education p{font-size:18px}.resume-page .skill p{font-size:17px}}
+    /* Experience: keep the role heading above a full-width, readable bullet list. */
+    .resume-page .experience{grid-template-columns:1fr;gap:24px}
+    .resume-page .role{position:static;padding:0 0 22px;background:none;border-top:0;border-bottom:1px solid var(--line)}
+    .resume-page .role h3{font-size:clamp(30px,4vw,42px)}
+    .resume-page .role .company{margin-top:10px}
+    .resume-page .role .dates{margin-top:10px}
+    .resume-page .role{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;column-gap:24px}
+    .resume-page .role h3,.resume-page .role .company{grid-column:1}
+    .resume-page .role .dates{grid-column:2;grid-row:1;margin-top:6px;text-align:right;white-space:nowrap}
+    .resume-page .copy{min-width:0;font-size:17px;line-height:1.7}
+    .resume-page .copy ul{display:grid;gap:14px}
+    .resume-page .copy li{margin:0;padding-left:22px;line-height:1.7}
+    .resume-page .copy li:before{content:"";top:.72em;width:7px;height:7px;border-radius:50%;background:var(--lime)}
+    .resume-page .education-dates{margin-top:12px;color:var(--orange);font:12px/1.6 var(--mono);letter-spacing:.04em}
+    @media(min-width:761px){.resume-page .education-dates{font-size:13px}}
+    @media(max-width:520px){.resume-page .experience{gap:18px}.resume-page .role{grid-template-columns:1fr;row-gap:0}.resume-page .role .dates{grid-column:1;grid-row:auto;margin-top:10px;text-align:left}.resume-page .copy{font-size:15px}.resume-page .copy li{padding-left:19px}}
